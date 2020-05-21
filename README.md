@@ -1,10 +1,10 @@
 # BIOMETRICS-SEMI-MARKOV-VIGNETTE
 
-Here we provide a comprehensible detailed vignette to run SEMI-MARKOV model using R software packages.
+Here we provide a comprehensible detailed vignette to run SEMI-MARKOV models using R software packages.
 
-We illustrate the inference of the semi-Markov model on two real datasets : _Stanford Heart Transplant data_ and _asthma control data_
+We illustrate the inference of the semi-Markov model on two real datasets: _Stanford Heart Transplant data_ and _asthma control data_.
 
-This vignette reproduce the results of our application section **Semi-Markov application in practice** from our submitted articles:
+This vignette reproduces the results of our application section **Semi-Markov application in practice** from our submitted article:
 
 _Estimation of Semi-Markov Multistate Models: A Comparison between the
 Sojourn Times and Transition Intensities Approaches_ A. Asanjarani, B. Liquet and Y. Nazarathy. (2020).
