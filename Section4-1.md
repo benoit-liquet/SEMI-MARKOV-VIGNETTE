@@ -1356,7 +1356,7 @@ res.NP.intensity <- c(res.NP.intensity,Npar.select)
 names(res.AIC.intensity)[6] <- "Weibull + select"
 ```
 
-Same results can be obtained using the _eha_ R packages
+Same results can be obtained using the _eha_ R package
 
 ```r
 library("eha")
