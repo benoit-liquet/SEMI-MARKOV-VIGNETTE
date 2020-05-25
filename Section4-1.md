@@ -245,7 +245,7 @@ Data:
 
 Need more processing step to get all the data in long format.
 
-### check data processing
+## Check data processing
 
 
 ```r
@@ -380,7 +380,7 @@ model.name <- "Baseline Exp"
 res.data.frame <- rbind(res.data.frame,data.frame(Model=rep(model.name,3),Transition=c("1-->2","1-->3","2-->3"),Distribution=rep("Exp",3),res.coef))
 ```
 
-### Hazard rate of sojourn times and Hazard rate of the Semi-Markov process
+### Hazard rate of sojourn times and Hazard rate of the semi-Markov process
 
 
 ```r
@@ -494,7 +494,7 @@ colnames(res.coef) <- c("surgery","sd","age","sd","year","sd","pij")
 res.data.frame <- rbind(res.data.frame,data.frame(Model=rep(model.name,3),Transition=c("1-->2","1-->3","2-->3"),Distribution=rep("Exp",3),res.coef))
 ```
 
-### Full weibull model
+### Full Weibull model
 
 
 ```r
@@ -725,7 +725,7 @@ Exponential baseline & 1730.07 &   4 \\
 \end{table}
 ```
 
-### Summary Estimation
+### Summary estimation
 
 
 ```r
@@ -762,7 +762,7 @@ res.data.frame
 
 ## Models based on Approach-II: instensity transition functions
 
-We first show how to produce a semi-parametric model for this illness death model using the _mstate_ package as a benchmark. Then, we present different way in R to get a full parametric semi-markov model through intensity transition modelling.
+We first show how to produce a semi-parametric model for this illness death model using the _mstate_ package as a benchmark. Then, we present different way in R to get a full parametric semi-Markov model through intensity transition modelling.
 
 ### First using semi-parametric approach with mstate package
 
@@ -807,7 +807,7 @@ cfull$coefficients
 
 
 
-## This part shows the different way to get a weibull model
+## This part shows a different way to get a Weibull model
 
 ### A full Weibull model: using flexsurvreg
 
@@ -973,7 +973,7 @@ AICfull
 
 ### Using mpr Package
 
-To check the result, we estimate the weibull model on the transition 1 -> 2 as an example
+To check the result, we estimate the Weibull model on the transition 1 -> 2 as an example
 
 
 ```r
@@ -1084,7 +1084,7 @@ AIC(surv.mod1)
 
 
 
-## Different full parametric model based on Intensity Transition functions
+## Different full parametric model based on intensity transition functions
 
 
 ### A full Weibull
@@ -1198,7 +1198,7 @@ res.NP.intensity <- c(res.NP.intensity,Npar)
 
 
 
-### A full A full Generalized Gamma (original)
+### A full Generalized Gamma (original)
 
 
 ```r
@@ -1229,7 +1229,7 @@ names(res.AIC.intensity) <- c("weibull","expon","gamma","gengamma","gengamma.ori
 
 
 
-### Improve weibull model by covariates selection
+### Improve Weibull model by covariates selection
 
 
 ```r
@@ -1264,7 +1264,7 @@ Npar
 #1-3  year
 #2-3 surgery and age
 ```
-Based on the results of the full weibull model and the significance of the covariates effect, we explore a Weibull model with only Age variable for transition 1 --> 2, Year variable for transition 1 -->3 and both Surgery and Age covariates for transition 2 -->3
+Based on the results of the full Weibull model and the significance of the effect of the covariates, we explore a Weibull model with only Age variable for transition 1 --> 2, Year variable for transition 1 -->3 and both Surgery and Age covariates for transition 2 -->3
 
 
 ```r
@@ -1385,7 +1385,7 @@ aic1+aic2+aic3
 
 
 
-### Improve generalized gamma model by covariates selection
+### Improve generalized Gamma model by covariates selection
 
 
 
@@ -1481,7 +1481,7 @@ res.NP.intensity <- c(res.NP.intensity,Npar.select)
 names(res.AIC.intensity)[7] <- "Generalized Gamma + select"
 ```
 
-So this Genarlized Gamma model with different covariate set on each transition gets a AIC of 1701.029. However the best waiting time model gets an AIC of 1639.733
+So this Generalized Gamma model with different covariate set on each transition gets an AIC of 1701.029. However, the best waiting time model gets an AIC of 1639.733
 
 
 ### AIC Results (Table for Biometrics article)
@@ -1513,8 +1513,8 @@ Generalized Gamma + select Generalized Gamma+Select 1701.029         13
 
 ### Variable effect 
 
-The paramatrization is different depending the package and distribution specified.
-To interpret the covariate effects as hazard ratio of the intensity proportionnal transition function it is possible to either use the results from Phreg or flexsurvreg (by changing dist="weibullPH")
+The parametrization is different depending on the package and distribution specified.
+To interpret the covariate effects as the hazard ratio of the intensity proportional transition function it is possible to either use the results from Phreg or flexsurvreg (by changing dist="weibullPH")
 
 
 ```r
@@ -1562,7 +1562,7 @@ WeibullPH$coefficients
 
 ### Get some plot results
 
-Plot of the cummulative transition-specific intensity/hazard functions can be obtained using the R package **flexsurv**
+Plot of the cumulative transition-specific intensity/hazard functions can be obtained using the R package **flexsurv**
 
 
 ```r
@@ -1602,7 +1602,7 @@ hazard.baseline <- SemiMarkov::hazard(fit.select.var,cov=c(0,0,0))
 #plot(hazard.baseline)
 ```
 
- To get the cummulative intensity functions
+ To get the cumulative intensity functions
 
 
 ```r
