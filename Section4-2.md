@@ -7,7 +7,7 @@ output: html_document
 
 
 
-# Package used to reproduce results from our submitted article
+# The R packages used to reproduce results from our submitted article
 
 
 
@@ -55,7 +55,7 @@ $Ncens
 [1] 371
 ```
 
-## Reversible three states model
+## Reversible three state model
 
 
 ```r
@@ -66,9 +66,9 @@ mtrans[2, c(1, 3)] <- c("W", "W")
 mtrans[3, c(1, 2)] <- c("W", "W")
 ```
 
-We first consider a reversible three state model as in Krol and Saint pierre (2005). Three covariates are available in this study : severity (disease severity: coded 1 if severe, 0 if mild-moderate asthma), BMI (body mass index: 1 if BMI >= 25, 0 if BMI < 25) and sex (1 if men, 0 if women).
+We first consider a reversible three state model as in Krol and Saint-Pierre (2005). Three covariates are available in this study : severity (disease severity: coded 1 if severe, 0 if mild-moderate asthma), BMI (body mass index: 1 if BMI >= 25, 0 if BMI < 25) and sex (1 if men, 0 if women).
 
-In this illustration we only use the BMI variable covariate and fit a first full parametric weibull semi-markov model using sojourn distribution approach.
+In this illustration, we only use the BMI variable covariate and fit a first full parametric Weibull semi-Markov model using sojourn distribution approach.
 
 
 ```r
@@ -115,7 +115,7 @@ AIC.sojourn
 [1] 2486.65
 ```
 
-In this model, significant results of the BMI variables effet are found for the transition 1->3 and 3 <-1.
+In this model, significant results of the BMI variables effect are found for the transition 1->3 and 3 <-1.
 A simple model is then performed:
 
 ```r
@@ -159,7 +159,7 @@ AIC.sojourn.select
 ```
 
 
-one can visualise either the hazard rate of the sojourn time or the hazrad rate of the semi-markov process (i.e, intensity tranistion). We show this result for the transition 1->3
+one can visualise either the hazard rate of the sojourn time or the hazard rate of the semi-Markov process (i.e, intensity tranistion). We show this result for the transition 1->3
 
 ```r
 plot(hazard(fit.select, cov = 0), hazard(fit, cov = 1), transitions = "13")
@@ -185,9 +185,9 @@ plot(hazard(fit.select, cov = 0, type = "lambda"), hazard(fit.select, cov = 1,
 ![plot of chunk unnamed-chunk-47](figure/unnamed-chunk-47-2.png)
 
 
-## Using Intensities transition  based approach
+## Using intensity transition functions  based approach
 
-To use the intensity tranistion approach, we have first to get the data in a wide format shape. It has been done using the R file Data\_management\_illustration2.R.
+To use the intensity transition approach, first we have to get the data in a wide format shape. It has been done using the R file Data\_management\_illustration2.R.
 
 
 
@@ -196,7 +196,7 @@ load("asthma-wide.Rdata")
 levels(asthma.wide$trans) <- c("6","5","3","4","2","1")
 ```
 
-### A full Weibull semi-Markov model on intensity tranistion 
+### A full Weibull semi-Markov model on intensity tranistion functions
 
 
 ```r
@@ -368,7 +368,7 @@ Same likelihood as it is the same model (see section 4.2 from our submitted arti
 #plot(crwei.list[[2]],type="hazard")
 ```
 
-A semi-parametric model can be performed with mstate package to explore the shape of the intensity tranistion functions
+A semi-parametric model can be performed with mstate package to explore the shape of the intensity transition functions
 
 
 ```r
@@ -387,7 +387,7 @@ par(mfrow=c(3,2))
 plot(mcox1,type="sep",lwd=2)
 ```
 
-### Plot the cumulative intensity transtion of 1-3 as example
+### Plot the cumulative intensity transtion function of 1-3 as an example
 
 
 ```r
@@ -407,7 +407,7 @@ lines(mexp1$Haz$time[mexp$Haz$trans==2], mexp1$Haz$Haz[mexp$Haz$trans==2],
 legend("topleft",legend=c("BMI=1 ","BMI=0"),lty=c(2,1),lwd=c(1,1),col=c("red","black"))
 ```
 
-### Improve the weibull model
+### Improve the Weibull model
 
 As BMI variable shows significant results only in transition 1-3 and 3-1, we simplify our model:
 
@@ -537,9 +537,9 @@ AICfull.select
 
 
 
-## Visualize comparison of Sojourn times and Intensity transition approaches
+## Visualize comparison of "sojourn times" and "intensity transition functions" approaches
 
-We plot the hazard rate of the semi-markov process using both approaches
+We plot the hazard rate of the semi-Markov process using both approaches
 
 
 ```r
