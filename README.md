@@ -26,12 +26,12 @@ library(mstate)
 ```
 
 
-## Section 4.1 Progressive three-state model for the Stanford Heart Transplant data 
+## Section 4.1 Progressive Three-State Model for the Stanford Heart Transplant data 
 
 - This analysis is presented [here](/Section4-1.md)
  
 
-## Section 4.2 Reversible Semi-Markov Model for the asthma control data
+## Section 4.2 Reversible Semi-Markov Model for the Asthma Control data
 
 - This analysis is presented [here](/Section4-2.md)
 
