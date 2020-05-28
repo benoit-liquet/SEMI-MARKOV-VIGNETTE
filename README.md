@@ -1,4 +1,4 @@
-# BIOMETRICS-SEMI-MARKOV-VIGNETTE
+# BIOSTATISTICS-SEMI-MARKOV-VIGNETTE
 
 Here we provide a comprehensible detailed vignette to run SEMI-MARKOV models using R software packages.
 
