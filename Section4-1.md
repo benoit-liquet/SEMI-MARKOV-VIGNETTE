@@ -194,7 +194,7 @@ Some conclusions:
 
 
 
-# Biostatistics paper analysis
+# Paper analysis
 
 To use the R package _SemiMarkov_, we first have to put the data in a long data format.
 
@@ -1484,7 +1484,7 @@ names(res.AIC.intensity)[7] <- "Generalized Gamma + select"
 So this Generalized Gamma model with different covariate set on each transition gets an AIC of 1701.029. However, the best waiting time model gets an AIC of 1639.733
 
 
-### AIC Results (Table for Biostatistics article)
+### AIC Results (Table for our article)
 
 
 
